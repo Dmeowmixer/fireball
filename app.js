@@ -33,8 +33,41 @@ var main = function(){
     userChoice='fireball';
   });
 
-  
+  if(userChoice===computerChoice){
 
+    $('.body').appendTo("The result is a tie!");
+
+  }
+
+  else if((computerChoice==='rock')&&(userChoice==='paper')){
+
+    $('.body').appendTo("You win!");
+  }
+
+  else if((computerChoice==='rock')&&(userChoice==='fireball')){
+
+    $('.body').appendTo("You lose! Computer wins!");
+  }
+
+  else if((computerChoice==='paper')&&(userChoice==='fireball')){
+
+    $('.body').appendTo("You win!");
+  }
+
+  else if((computerChoice==='paper')&&(userChoice==='rock')){
+
+    $('.body').appendTo("You lose! Computer wins!");
+  }
+
+  else if((computerChoice==='fireball')&&(userChoice==='rock')){
+
+    $('.body').appendTo("You win!");
+  }
+
+  else if((computerChoice==='fireball')&&(userChoice==='paper')){
+
+    $('.body').appendTo("You lose! Computer wins!");
+  }
 
 
 
