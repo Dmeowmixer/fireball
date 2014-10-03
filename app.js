@@ -1,12 +1,10 @@
-var computerChoice = Math.random();
+var computerChoice = Math.floor(Math.random()*3);
 
-
-
-if(computerChoice<0.34){
+if(computerChoice===1){
   computerChoice = 'rock';
 }
 
-else if((computerChoice<=0.67)&&(computerChoice>=0.34)){
+else if(computerChoice===2){
   computerChoice = 'paper';
 }
 
