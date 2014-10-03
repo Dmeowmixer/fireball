@@ -1,0 +1,27 @@
+  .header {
+ 	color : red;
+ 	font-size : 50px;
+ 	text-align: center;
+ }
+  .game h2 {
+  	text-align: center;
+  	font-size : 30px;
+  	font-style: times;
+  }
+  .rock {
+  	font-size : 20px;
+  	color : brown;
+  	width : 25px;
+  }
+  .paper {
+  	text-align : center;
+  	color : #00FFFF;
+  	font-size : 20px;
+  	width : 25px;
+  }
+  .fireball {
+  	text-align : right;
+  	color:red;
+  	font-size :20px;
+  	width : 25px;
+  }

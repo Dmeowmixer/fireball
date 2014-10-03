@@ -1,5 +1,4 @@
 var computerChoice = Math.floor(Math.random()*3);
-
 if(computerChoice===1){
   computerChoice = 'rock';
 }
@@ -13,115 +12,79 @@ else{
 }
 
 
-//<<<<<<< HEAD
 
-//=======
-//>>>>>>> c3f19845d7182ed9ed6a7b70a6b2e3a9faa15e0e
-//all interactive functions go in here
 var main = function(){
 
-  var userChoice = '';
-
+  var userChoice = "";
   //when rock is clicked
   $('.rock').click(function(){
     userChoice='rock';
-//<<<<<<< HEAD
+alert(userChoice);
+alert(computerChoice);
+
     process(userChoice);
-//=======
-//>>>>>>> c3f19845d7182ed9ed6a7b70a6b2e3a9faa15e0e
+
   });
 
   //when paper is clicked
   $('.paper').click(function(){
     userChoice='paper';
-//<<<<<<< HEAD
+
+    alert(userChoice);
+    alert(computerChoice);
     process(userChoice);
-//=======
-//>>>>>>> c3f19845d7182ed9ed6a7b70a6b2e3a9faa15e0e
+
   });
 
     //when message is clicked
   $('.fireball').click(function(){
     userChoice='fireball';
-//<<<<<<< HEAD
+
   process(userChoice);
   });
 
   function process(userChoice){
     if(userChoice===computerChoice){
 
-      $('.body').appendTo("The result is a tie!");
+      $('.game').append("<p>The result is a tie!</p");
 
     }
 
     else if((computerChoice==='rock')&&(userChoice==='paper')){
 
-      $('.body').appendTo("You win!");
+      $('.game').append("<p>You win!</p>");
     }
 
     else if((computerChoice==='rock')&&(userChoice==='fireball')){
 
-      $('.body').appendTo("You lose! Computer wins!");
+      $('.game').append("<p>You lose! Computer wins!</p>");
     }
 
     else if((computerChoice==='paper')&&(userChoice==='fireball')){
 
-      $('.body').appendTo("You win!");
+      $('.game').append("<p>You win!</p>")
     }
 
     else if((computerChoice==='paper')&&(userChoice==='rock')){
 
-      $('.body').appendTo("You lose! Computer wins!");
+      $('.game').append("<p>You lose! Computer wins!</p>");
     }
 
     else if((computerChoice==='fireball')&&(userChoice==='rock')){
 
-      $('.body').appendTo("You win!");
+      $('.game').append("<p>You win!</p>");
     }
 
     else if((computerChoice==='fireball')&&(userChoice==='paper')){
 
-      $('.body').appendTo("You lose! Computer wins!");
+      $('.game').append("<p>You lose! Computer wins!</p>");
     }
-//=======
-  }
-
-  if(userChoice===computerChoice){
-
-    $('.body').appendTo("The result is a tie!");
+    
 
   }
 
-  else if((computerChoice==='rock')&&(userChoice==='paper')){
+ 
 
-    $('.body').appendTo("You win!");
-  }
-
-  else if((computerChoice==='rock')&&(userChoice==='fireball')){
-
-    $('.body').appendTo("You lose! Computer wins!");
-  }
-
-  else if((computerChoice==='paper')&&(userChoice==='fireball')){
-
-    $('.body').appendTo("You win!");
-  }
-
-  else if((computerChoice==='paper')&&(userChoice==='rock')){
-
-    $('.body').appendTo("You lose! Computer wins!");
-  }
-
-  else if((computerChoice==='fireball')&&(userChoice==='rock')){
-
-    $('.body').appendTo("You win!");
-  }
-
-  else if((computerChoice==='fireball')&&(userChoice==='paper')){
-
-    $('.body').appendTo("You lose! Computer wins!");
-//>>>>>>> c3f19845d7182ed9ed6a7b70a6b2e3a9faa15e0e
-  }
 
 
 
@@ -129,4 +92,3 @@ var main = function(){
 
 //load main function only after document is loaded
 $(document).ready(main);
-
