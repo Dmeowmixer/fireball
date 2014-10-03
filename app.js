@@ -1,26 +1,46 @@
-var computerChoice = Math.floor(Math.random()*3);
-if(computerChoice===1){
-  computerChoice = 'rock';
+var computerChoice =  '';
+function getComputerChoice(){
+   computerChoice = Math.floor(Math.random()*3);
+
+  if(computerChoice===1){
+    computerChoice = 'rock';
+  }
+
+  else if(computerChoice===2){
+    computerChoice = 'paper';
+  }
+
+  else{
+    computerChoice = 'fireball';
+  }
+
 }
 
-else if(computerChoice===2){
-  computerChoice = 'paper';
+
+
+var playAgain = false;
+function replay(){
+  if (playAgain){
+    getComputerChoice();
+  }
+  else {
+    alert('Fine then');
+    compScore=0;
+    userScore=0;
+  }
 }
 
-else{
-  computerChoice = 'fireball';
-}
+var compScore = 0;
+var userScore = 0;
 
 
 
 var main = function(){
-
+getComputerChoice();
   var userChoice = "";
   //when rock is clicked
   $('.rock').click(function(){
     userChoice='rock';
-alert(userChoice);
-alert(computerChoice);
 
     process(userChoice);
 
@@ -30,8 +50,7 @@ alert(computerChoice);
   $('.paper').click(function(){
     userChoice='paper';
 
-    alert(userChoice);
-    alert(computerChoice);
+   
     process(userChoice);
 
   });
@@ -46,38 +65,60 @@ alert(computerChoice);
   function process(userChoice){
     if(userChoice===computerChoice){
 
-      $('.game').append("<p>The result is a tie!</p");
-
+      //$('.game').append("<p>The result is a tie!</p");
+      alert('The result is a tie!');
+      playAgain = confirm('ComputerScore: ' + compScore + '\nYour score: ' + userScore + '\nPlay again?');
+      replay();
     }
 
     else if((computerChoice==='rock')&&(userChoice==='paper')){
-
-      $('.game').append("<p>You win!</p>");
+      userScore++;
+      //$('.game').append("<p>You win!</p>");
+      alert('You win!');
+      playAgain = confirm('ComputerScore: ' + compScore + '\nYour score: ' + userScore + '\nPlay again?');
+      replay();
+      
     }
 
     else if((computerChoice==='rock')&&(userChoice==='fireball')){
+      compScore++;
+      //$('.game').append("<p>You lose! Computer wins!</p>");
+      alert('You lose! Computer wins!');
+      playAgain = confirm('ComputerScore: ' + compScore + '\nYour score: ' + userScore + '\nPlay again?');
+      replay();
 
-      $('.game').append("<p>You lose! Computer wins!</p>");
     }
 
     else if((computerChoice==='paper')&&(userChoice==='fireball')){
-
-      $('.game').append("<p>You win!</p>")
+      userScore++;
+      //$('.game').append("<p>You win!</p>")
+      alert('You win!');
+      playAgain = confirm('ComputerScore: ' + compScore + '\nYour score: ' + userScore + '\nPlay again?');
+      replay();
     }
 
     else if((computerChoice==='paper')&&(userChoice==='rock')){
-
-      $('.game').append("<p>You lose! Computer wins!</p>");
+      compScore++;
+      //$('.game').append("<p>You lose! Computer wins!</p>");
+       alert('You lose! Computer wins!');
+       playAgain = confirm('ComputerScore: ' + compScore + '\nYour score: ' + userScore + '\nPlay again?');
+      replay();
     }
 
     else if((computerChoice==='fireball')&&(userChoice==='rock')){
-
-      $('.game').append("<p>You win!</p>");
+      userScore++;
+      //$('.game').append("<p>You win!</p>");
+      alert('You wins!');
+      playAgain = confirm('ComputerScore: ' + compScore + '\nYour score: ' + userScore + '\nPlay again?');
+      replay();
     }
 
     else if((computerChoice==='fireball')&&(userChoice==='paper')){
-
-      $('.game').append("<p>You lose! Computer wins!</p>");
+      compScore++;
+      //$('.game').append("<p>You lose! Computer wins!</p>");
+      alert('You lose! Computer wins!');
+      playAgain = confirm('ComputerScore: ' + compScore + '\nYour score: ' + userScore + '\nPlay again?');
+      replay();
     }
     
 
