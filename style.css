@@ -1,3 +1,6 @@
+  body {
+  	background-image:url ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC3MEL82Bsw5btpuMwcfDnsnb9S-lBpo6yBhxKMZUZuDNwAHz8w');
+  }
   .header {
  	color : red;
  	font-size : 50px;
@@ -7,6 +10,7 @@
   	text-align: center;
   	font-size : 30px;
   	font-style: times;
+  	color:#6495ED;
   }
   .rock {
   	float : left;
@@ -14,22 +18,34 @@
   	color : brown;
   	margin-right: 120px;
   	margin-left: 10px;
+  	
+
+
+  }
+  .rock:hover{
+	cursor:pointer;
 
   }
   .paper {
   	float : left;
   	color : #00FFFF;
   	font-size : 30px;
-  	margin-left : 120px;
+  	margin-left : 160px;
   	margin-right: 120px;
   	
+  }
+  .paper:hover {
+  	cursor:pointer;
   }
   .fireball {
   	
   	color:red;
   	font-size :30px;
   	float : left;
-  	margin-left:90px;
+  	margin-left:60px;
+  }
+  .fireball:hover{
+  	cursor:pointer;
   }
 .scoreboard {
 	border : 1px;
